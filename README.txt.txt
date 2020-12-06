@@ -1,1 +1,0 @@
-My profile, built from the ground up. Landing page will be a collection of things I've learned, and a form to contact me and links to reach my linkedin and github. 
