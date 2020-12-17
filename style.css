@@ -1,18 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
 
+:root {
+    --secondary-green: rgb(28, 236, 0);
+    --dark-green: rgba(7,97,7,0.1);
+}
 * { 
     box-sizing: border-box;
 }
-
+ 
 body {
     font-family: 'Play', sans-serif;
     background-color: #040e05;
     color: rgb(28, 236, 0);
     overflow: hidden;
     margin: 0;
-    -webkit-text-fill-color: rgba(7,97,7,0.1);
-    -webkit-text-stroke: 1px rgb(28, 236, 0);
+    -webkit-text-fill-color: var(--dark-green);
+    -webkit-text-stroke: 1px var(--secondary-green);
 
+}
+
+a:visited{
+    text-decoration: none;
+    color: inherit;
 }
 
 .container {
@@ -28,7 +37,7 @@ nav {
     justify-content: center;
     -webkit-text-stroke-width: .5px;
     position: absolute;
-    bottom: 10px;
+    bottom: 10vh;
     overflow: hidden;
     
 }
@@ -36,17 +45,18 @@ ul{
     padding: 0;
 }
 
-nav li {
+li {
     margin: 5px;
     display: inline;
-    list-style-type: none;
-    cursor: pointer;
-    
+    list-style-type: none;    
 
 }
 
-nav li i {
+li i {
     margin-right: 3px;
+}
+a {
+    text-decoration: none;
 }
 
 .hero {
@@ -64,7 +74,31 @@ nav li i {
     -webkit-text-stroke-width: 1px;
     text-shadow: 0 0 1px rgba(1, 7, 0, 0.788), 0 0 3px rgba(48, 241, 27, 0.788);
 }
+ul.hero-links {
+    padding: 20px;
+}
 
 .canvas1,canvas2{
     z-index: -100;
 }
+
+.blinking-cursor {
+    font-weight: 80;
+    font-size: 2rem;
+    -webkit-text-stroke-width: 8px;
+    -webkit-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
+  }
+  
+  @keyframes blink {    
+    50% {
+    opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
